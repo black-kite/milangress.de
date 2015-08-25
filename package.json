@@ -28,7 +28,13 @@
     "gulp-minify-css": "^1.2.1",
     "tiny-lr": "^0.1.6"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp-filesize": "0.0.6",
+    "gulp-header": "^1.5.0",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-util": "^3.0.6",
+    "merge-stream": "^1.0.0"
+  },
   "scripts": {
     "test": "test"
   },
@@ -38,8 +44,5 @@
   },
   "author": "Milan Gress",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/getkirby/starterkit/issues"
-  },
-  "homepage": "https://github.com/getkirby/starterkit#readme"
+  "homepage": "http://www.milangress.de"
 }
