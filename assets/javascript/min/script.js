@@ -1,0 +1,1 @@
+$(document).ready(function(){var n;n=!0,$("#navicon").click(function(){return n===!0?($("#navicon").removeClass("inactive").addClass("active"),$("ul.menu").slideDown(250),void(n=!1)):($("#navicon").removeClass("active").addClass("inactive"),$("ul.menu").slideUp(250),void(n=!0))})});

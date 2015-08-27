@@ -1,15 +1,13 @@
-<h2>Latest projects</h2>
+<section class="projects">
+  <?php foreach(page('projects')->children()->visible() as $project): ?>
 
-<ul class="teaser cf">
-  <?php foreach(page('projects')->children()->visible()->limit(3) as $project): ?>
-  <li>
-    <h3><a href="<?php echo $project->url() ?>"><?php echo $project->title()->html() ?></a></h3>
-    <p><?php echo $project->text()->excerpt(80) ?> <a href="<?php echo $project->url() ?>">read&nbsp;more&nbsp;→</a></p>
-    <?php if($image = $project->images()->sortBy('sort', 'asc')->first()): ?>
-    <a href="<?php echo $project->url() ?>">
+  <div class="projects_row">
+
+    <?php foreach($project->images()->sortBy('sort', 'asc') as $image): ?>
       <img src="<?php echo $image->url() ?>" alt="<?php echo $project->title()->html() ?>" >
-    </a>
-    <?php endif ?>
-  </li>
+    <?php endforeach ?>
+
+  </div>
+
   <?php endforeach ?>
-</ul>
+</section>

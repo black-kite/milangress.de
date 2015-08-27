@@ -1,7 +1,7 @@
 {
-  "name": "kirbystart-gulp",
+  "name": "portfolio",
   "version": "0.0.1",
-  "description": "gulp for KirbyCMS",
+  "description": "2015 Portfolio von Milan Gress, Build on Kirby CMS, postCSS",
   "main": "gulpfile.js",
   "dependencies": {
     "gulp-autoprefixer": "^2.3.1",
@@ -43,6 +43,6 @@
     "url": "git+https://github.com/getkirby/starterkit.git"
   },
   "author": "Milan Gress",
-  "license": "ISC",
+  "license": "MIT",
   "homepage": "http://www.milangress.de"
 }

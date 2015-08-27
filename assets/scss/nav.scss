@@ -1,0 +1,149 @@
+$speed: 0.25s;
+
+#navicon {
+  margin: 1em;
+  width: 48px;
+  height: 48px;
+  padding-top: 20px;
+}
+#navicon .bar {
+  width: 50px;
+  height: 3px;
+  background-color: #000;
+  transform: rotate(0deg);
+}
+#navicon .bar:nth-of-type(2) {
+  margin-top: -20px;
+}
+#navicon .bar:nth-of-type(3) {
+  margin-top: 32px;
+}
+#navicon.active .bar:nth-of-type(1) {
+  animation: dissappear $speed ease;
+  animation-fill-mode: forwards;
+}
+#navicon.active .bar:nth-of-type(2) {
+  animation: squishTop $speed ease;
+  animation-fill-mode: forwards;
+}
+#navicon.active .bar:nth-of-type(3) {
+  animation: squishBottom $speed ease;
+  animation-fill-mode: forwards;
+}
+#navicon.inactive .bar:nth-of-type(1) {
+  animation: dissappearRev $speed ease;
+  animation-fill-mode: forwards;
+}
+#navicon.inactive .bar:nth-of-type(2) {
+  animation: squishTopRev $speed ease;
+  animation-fill-mode: forwards;
+}
+#navicon.inactive .bar:nth-of-type(3) {
+  animation: squishBottomRev $speed ease;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes squishBottom {
+  0% {
+    margin-top: 32px;
+    transform: rotate(0deg);
+  }
+  50% {
+    margin-top: -3px;
+    transform: rotate(0deg);
+  }
+  75% {
+    margin-top: -3px;
+    transform: rotate(0deg);
+  }
+  100% {
+    margin-top: -3px;
+    transform: rotate(-135deg);
+  }
+}
+
+@keyframes squishTop {
+  0% {
+    margin-top: -20px;
+    transform: rotate(0deg);
+  }
+  50% {
+    margin-top: -3px;
+    transform: rotate(0deg);
+  }
+  75% {
+    margin-top: -3px;
+    transform: rotate(0deg);
+  }
+  100% {
+    margin-top: -3px;
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes dissappear {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes squishBottomRev {
+  0% {
+    margin-top: -3px;
+    transform: rotate(-135deg);
+  }
+  50% {
+    margin-top: -3px;
+    transform: rotate(0deg);
+  }
+  75% {
+    margin-top: -3px;
+    transform: rotate(0deg);
+  }
+  100% {
+    margin-top: 32px;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes squishTopRev {
+  0% {
+    margin-top: -3px;
+    transform: rotate(-45deg);
+  }
+  50% {
+    margin-top: -3px;
+    transform: rotate(0deg);
+  }
+  75% {
+    margin-top: -3px;
+    transform: rotate(0deg);
+  }
+  100% {
+    margin-top: -20px;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes dissappearRev {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
