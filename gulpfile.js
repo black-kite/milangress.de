@@ -139,6 +139,19 @@ gulp.task('stylesDeploy', function() {
 
 });
 
+gulp.task('critical', function() {
+	return gulp.src(['./assets/scss/critical/critical.scss'])
+	.pipe(concat('critical.css'))
+	.pipe(sass().on('error', sass.logError))
+	.pipe(autoprefix('last 2 version', '> 1%', 'ie 8'))
+	.pipe(minifyCSS())
+	.pipe(header("/* Critical inline-Styles (above the fold) — do NOT edit by hand! */\n"))
+	.pipe(gulp.dest('./assets/css/'))
+
+
+});
+
+
 
 
 //Gulp watch directorys
@@ -146,14 +159,15 @@ gulp.task('watch', function () {
 	gulp.watch('./assets/scss/*.scss', ['styles']);
 	gulp.watch('./assets/javascript/*.js', ['scripts']);
 	gulp.watch('./assets/images/src/**/*', ['assetimage']);
+	gulp.watch('./assets/scss/critical/*.scss', ['critical']);
 });
 
 
 
 // default gulp task
 
-gulp.task('build', ['scripts', 'styles', 'assetimage']);
+gulp.task('build', ['scripts', 'styles', 'assetimage', 'critical']);
 
 gulp.task('default', ['build', 'watch', 'connect-sync'], function() {});
 
-gulp.task('deploy', ['scripts', 'assetimage', 'images', 'stylesDeploy']);
+gulp.task('deploy', ['scripts', 'assetimage', 'images', 'stylesDeploy', 'critical']);
