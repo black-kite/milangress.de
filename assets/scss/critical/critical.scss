@@ -1,5 +1,5 @@
 body {
-	font-family: "Monospace821BT-Bold",Helvetica,sans-serif;
+	font-family: "monospaceroman",Helvetica,sans-serif;
 	font-weight: normal;
 	font-style: normal;
 	font-size: 26px;
@@ -14,7 +14,7 @@ a {
 	text-decoration: none;
 	color: #000;
 	&:hover {
-		font-family: "Monospace821BT-Italic";
+		font-style: italic;
 	}
 }
 

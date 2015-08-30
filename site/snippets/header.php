@@ -7,12 +7,11 @@
 
   <title><?php echo $site->title()->html() ?> | <?php echo $page->title()->html() ?></title>
   <meta name="description" content="<?php echo $site->description()->html() ?>">
-  <meta name="keywords" content="<?php echo $site->keywords()->html() ?>">
-  <?php echo css('assets/css/main.css') ?>
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <?php echo js('assets/javascript/app.js') ?>
+  <meta name="keywords" content="<?php echo $site->keywords()->html() ?>"> 
 
+<style type="text/css">
+  <?php include './assets/css/critical.css'; ?>
+</style>
 
 
 </head>

@@ -1,13 +1,16 @@
+
+
 $speed: 0.25s;
+$easing: ease;
 
 #navicon {
   margin: 1em;
-  width: 48px;
-  height: 48px;
+  width: 45px;
+  height: 50px;
   padding-top: 20px;
 }
 #navicon .bar {
-  width: 50px;
+  width: 45px;
   height: 3px;
   background-color: #000;
   transform: rotate(0deg);
@@ -19,27 +22,27 @@ $speed: 0.25s;
   margin-top: 32px;
 }
 #navicon.active .bar:nth-of-type(1) {
-  animation: dissappear $speed ease;
+  animation: dissappear $speed $easing;
   animation-fill-mode: forwards;
 }
 #navicon.active .bar:nth-of-type(2) {
-  animation: squishTop $speed ease;
+  animation: squishTop $speed $easing;
   animation-fill-mode: forwards;
 }
 #navicon.active .bar:nth-of-type(3) {
-  animation: squishBottom $speed ease;
+  animation: squishBottom $speed $easing;
   animation-fill-mode: forwards;
 }
 #navicon.inactive .bar:nth-of-type(1) {
-  animation: dissappearRev $speed ease;
+  animation: dissappearRev $speed $easing;
   animation-fill-mode: forwards;
 }
 #navicon.inactive .bar:nth-of-type(2) {
-  animation: squishTopRev $speed ease;
+  animation: squishTopRev $speed $easing;
   animation-fill-mode: forwards;
 }
 #navicon.inactive .bar:nth-of-type(3) {
-  animation: squishBottomRev $speed ease;
+  animation: squishBottomRev $speed $easing;
   animation-fill-mode: forwards;
 }
 
