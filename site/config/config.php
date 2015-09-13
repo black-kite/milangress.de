@@ -197,6 +197,12 @@ c::set('routes', array(
 			return go('sitemap.xml');
 		}
 	),
+	array(                                                                      // Internally route sitemap.xml to sitemap (template)
+		'pattern' => 'projects',
+		'action'  => function() {
+			return go('/');
+		}
+	),
 ));
 
 

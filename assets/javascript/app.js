@@ -1,6 +1,7 @@
+//jshint jquery : true
 $(document).ready(function () {
-    var active;
-    active = true;
+    'use strict';
+    var active = true;
     $('#navicon').click(function () {
         if (active === true) {
             $('#navicon')
@@ -10,8 +11,8 @@ $(document).ready(function () {
             $('ul.menu')
             .slideDown(250);
 
+            $('body').addClass('is-yellow');
             active = false;
-            return console.log(active);
         } else {
             $('#navicon')
             .removeClass('active')
@@ -20,8 +21,18 @@ $(document).ready(function () {
             $('ul.menu')
             .slideUp(250);
 
+            $('body').removeClass('is-yellow');
+
             active = true;
-            return console.log(active);
         }
+    });
+    var row = function (that){
+        return $(that).closest('img');
+    };
+    $('.projects').on('click', 'img', function() {
+        $('img').removeClass('is-yellow__border');
+        row(this).toggleClass('is-yellow__border');
+        $('.description').slideUp(250);
+        $(this).closest('.projects_row').next().slideDown(250);
     });
 });

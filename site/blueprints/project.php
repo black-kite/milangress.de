@@ -4,6 +4,13 @@ title: Project
 pages: false
 files:
   sortable: true
+  fields:
+    author:
+      label: Author
+      type: text
+    alt:
+      label: Alttext
+      type: text
 fields:
   title:
     label: Title

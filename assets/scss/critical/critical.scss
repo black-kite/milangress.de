@@ -1,3 +1,10 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
 	font-family: "monospaceroman",Helvetica,sans-serif;
 	font-weight: normal;
@@ -19,15 +26,20 @@ a {
 }
 
 .wrapper {
-	max-width: 1200px;
+	max-width: 1300px;
 	margin: 0 auto;
-	padding: 0 5px;
+	padding: 0 50px;
+	@media (max-width: 750px) {
+		padding: 0 5px;
+		
+	}
 }
 
 .logo{
 	left: 50%;
 	top: 2rem;
 	position: fixed;
+	z-index: 800;
 	//color: #0033CC;
 }
 
@@ -48,5 +60,13 @@ a {
 ul.menu{
 	display: none;
 	position: absolute;
+}
+.is-yellow{
+	background-color: #FFDC00;
+}
+.is-yellow__border{
+	//border: yellow solid 8px;
+	box-shadow: 0 0 32px -10px #FFDC00, inset 0 0 32px -10px #FFDC00;
+	z-index: 100;
 }
 

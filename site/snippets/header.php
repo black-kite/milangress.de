@@ -8,7 +8,7 @@
   <title><?php echo $site->title()->html() ?> | <?php echo $page->title()->html() ?></title>
   <meta name="description" content="<?php echo $site->description()->html() ?>">
   <meta name="keywords" content="<?php echo $site->keywords()->html() ?>"> 
-
+  <?= js('./assets/javascript/vendor/lazysizes.min.js')?>
 <style type="text/css">
   <?php include './assets/css/critical.css'; ?>
 </style>
