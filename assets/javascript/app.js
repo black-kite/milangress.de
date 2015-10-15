@@ -37,27 +37,28 @@ $.fn.beschreibung = function() {
 
 $(document).ready(function () {
     'use strict';
-    var active = true;
+    var active = true; //Checks if menu is open or closed
     $('#navicon').click(function () {
-        if (active === true) {
-            $('#navicon')
+        if (active === true) {  /*is Navigation Closed?*/
+            $('#navicon') /*hamburger-icon to X-icon*/
             .removeClass('inactive')
             .addClass('active');
 
-            $('ul.menu')
+            $('ul.menu') /*expand Navigation*/
             .slideDown(250);
 
-            $('body').addClass('is-yellow');
-            active = false;
-        } else {
-            $('#navicon')
+            $('body').addClass('is-yellow'); /*make background yellow*/
+
+            active = false; 
+        } else { /*(active === false) / is Navigation Open?*/
+            $('#navicon') /*X-icon to hamburger-icon*/
             .removeClass('active')
             .addClass('inactive');
 
-            $('ul.menu')
+            $('ul.menu') /*collapse Navigation*/
             .slideUp(250);
 
-            $('body').removeClass('is-yellow');
+            $('body').removeClass('is-yellow'); /*reset background color*/
 
             active = true;
         }
