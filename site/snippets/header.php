@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
   <title><?php echo $site->title()->html() ?> | <?php echo $page->title()->html() ?></title>
   <meta name="description" content="<?php echo $site->description()->html() ?>">
   <meta name="keywords" content="<?php echo $site->keywords()->html() ?>"> 
   <?= js('./assets/javascript/vendor/lazysizes.min.js')?>
+  <!-- Critical CSS to reduce FUT-->
 <style type="text/css">
   <?php include './assets/css/critical.css'; ?>
 </style>
-
-
 </head>
 <body>
+  <div class="showMouse"><!-- Force Browser to always show the default Cursor (Protecting the browserwindow)--></div>
+  <!-- Wrapping around all the content -->
   <div class="wrapper">
   <div class="logo">
     <a href="/">
