@@ -7,8 +7,12 @@
 					<img 
 						data-src="<?php echo $image->url() ?>" 
 						alt="<?php echo $image->alt() ?>" 
-						class="project-image lazyload"
-						title="<?php echo $image->titletag() ?>"
+						<?php if($image->titletag()->empty()): ?>
+							class="project-image lazyload"
+						<?php else: ?>
+							class="project-image lazyload noCourser decreaseOpacity"
+							title="<?php echo $image->titletag() ?>"
+						<?php endif ?>
 						style="max-width: <?php echo $image->width() ?>px" 
 						itemprop="associatedMedia">
 					<meta itemprop="creator" content="<?php echo $image->author() ?>">

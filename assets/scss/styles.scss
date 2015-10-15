@@ -31,16 +31,17 @@
 	text-align: left;
 }
 
-/* titleClouds CSS */
 
-.project-image {
-    cursor: none;
-    margin-bottom: 20px;
-    transition: all .3s;
+.noCourser {
+	cursor: none;
 }
-.project-image:hover {
-    opacity: .7;
+.decreaseOpacity {
+	transition: opacity .3s;
 }
+.decreaseOpacity:hover {
+	opacity: .7;
+}
+
 #bildbeschreibung{
     display:none;
     position:fixed;
@@ -49,4 +50,3 @@
     line-height: 1.2rem;
     text-align: center;
 }
-/* END titleClouds */
