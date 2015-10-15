@@ -63,10 +63,10 @@ $(document).ready(function () {
             active = true;
         }
     });
+    /*
     var row = function (that){
         return $(that).closest('img');
     };
-    /*
     $('.projects').on('click', 'img', function() {
         $('img').removeClass('is-yellow__border');
         row(this).toggleClass('is-yellow__border');
@@ -74,6 +74,6 @@ $(document).ready(function () {
         $(this).closest('.projects_row').next().slideDown(250);
     });
     */
-    
-$('.projects img').beschreibung();
+
+    $('.projects img').beschreibung();
 });
