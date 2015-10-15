@@ -10,4 +10,7 @@ Tags: city
 
 ----
 
-Text: **Read-ability** explorations in type @afk — 2014
+Text: 
+
+Read-ability <br />
+explorations in type @afk — 2014

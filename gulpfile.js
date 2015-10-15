@@ -64,7 +64,7 @@ gulp.task('scripts', function() {
 	gulp.src([jsLib, jsSrc])
 	.pipe(concat('script.js'))
 	.pipe(stripDebug())
-	.pipe(uglify())
+	// .pipe(uglify())
 	.pipe(gulp.dest(jsDst))
 	.pipe(filesize())
 	.on('error', gutil.log);

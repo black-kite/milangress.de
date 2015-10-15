@@ -30,3 +30,23 @@
 	line-height: 47px;
 	text-align: left;
 }
+
+/* titleClouds CSS */
+
+.project-image {
+    cursor: none;
+    margin-bottom: 20px;
+    transition: all .3s;
+}
+.project-image:hover {
+    opacity: .7;
+}
+#bildbeschreibung{
+    display:none;
+    position:absolute;
+    z-index:999999;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    text-align: center;
+}
+/* END titleClouds */

@@ -8,6 +8,7 @@
 						data-src="<?php echo $image->url() ?>" 
 						alt="<?php echo $image->alt() ?>" 
 						class="project-image lazyload"
+						title="<?php echo $project->text() ?>"
 						style="max-width: <?php echo $image->width() ?>px" 
 						itemprop="associatedMedia">
 					<meta itemprop="creator" content="<?php echo $image->author() ?>">
