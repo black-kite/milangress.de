@@ -44,17 +44,17 @@ var assetimgSrc = './assets/images/src/**/*',
 
 
 
+
 gulp.task('connect-sync', function() {
-
-	php.server({}, function (){
-		browserSync({
-			proxy: '127.0.0.1:8000'
-		});
-	});
-
-	gulp.watch('**/*.php').on('change', function () {
-		browserSync.reload();
-	}); 
+  connect.server({}, function (){
+    browserSync({
+      proxy: 'localhost:8000'
+    });
+  });
+ 
+  gulp.watch('**/*.php').on('change', function () {
+    browserSync.reload();
+  });
 });
 
 
@@ -168,6 +168,6 @@ gulp.task('watch', function () {
 
 gulp.task('build', ['scripts', 'styles', 'assetimage', 'critical']);
 
-gulp.task('default', ['build', 'watch', 'connect-sync'], function() {});
+gulp.task('default', ['build', 'watch',], function() {});
 
 gulp.task('deploy', ['scripts', 'assetimage', 'images', 'stylesDeploy', 'critical']);
