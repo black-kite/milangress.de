@@ -1,26 +1,39 @@
 
 //jshint jquery : true
 
+/*
+*
+* Beschreibung - jQuery-Plugin
+*
+* adds the Title-Attribute from the element
+* as a DOM element at the mouseposition
+*
+* @author: Milan Gress, dev@milangress.de
+* @use: $('sector').beschreibung();
+*/
 $.fn.beschreibung = function() {
     'use strict';    
-    var tcEl = this;    
+    var bsElement = this;    
     $('body').append('<div id="bildbeschreibung"/>');
     $(document).mousemove(function(mTC){
-        var textwith = $("#bildbeschreibung").width();
-        $("#bildbeschreibung").css({top:(mTC.clientY+5)+"px",left:(mTC.clientX-textwith/2)+"px"});
+        var textwith = $('#bildbeschreibung').width();
+        $('#bildbeschreibung').css({top:(mTC.clientY+1)+'px',left:(mTC.clientX-textwith/2)+'px'});
     });
-    tcEl.each(function(){
-     var el = $(this);
-     var ti = el.attr('title');   
-     el.hover(function(){
-        $('#bildbeschreibung').fadeTo(300, 1).html( ti );        
-        el.attr('title', '');
+    bsElement.each(function(){
+     var bsSub = $(this);
+     var bsTitel = bsSub.attr('title');   
+     bsSub.hover(function(){
+        $('#bildbeschreibung').fadeTo(300, 1).html( bsTitel );        
+        bsSub.attr('title', '');
     },function(){
         $('#bildbeschreibung').hide().html('');
-        el.attr('title', ti);
+        bsSub.attr('title', bsTitel);
     });
  });
 };
+/*
+* END (Beschreibung - jQuery-Plugin)
+*/
 
 
 $(document).ready(function () {
@@ -53,11 +66,14 @@ $(document).ready(function () {
     var row = function (that){
         return $(that).closest('img');
     };
+    /*
     $('.projects').on('click', 'img', function() {
         $('img').removeClass('is-yellow__border');
         row(this).toggleClass('is-yellow__border');
         $('.description').slideUp(250);
         $(this).closest('.projects_row').next().slideDown(250);
     });
+    */
+    
 $('.projects img').beschreibung();
 });
