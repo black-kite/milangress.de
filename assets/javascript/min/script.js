@@ -1,13 +1,13 @@
 
 //jshint jquery : true
 
-$.fn.tclouds = function() {
+$.fn.beschreibung = function() {
     'use strict';    
     var tcEl = this;    
     $('body').append('<div id="bildbeschreibung"/>');
     $(document).mousemove(function(mTC){
         var textwith = $("#bildbeschreibung").width();
-        $("#bildbeschreibung").css({top:(mTC.pageY+5)+"px",left:(mTC.pageX-textwith/2)+"px"});
+        $("#bildbeschreibung").css({top:(mTC.clientY+5)+"px",left:(mTC.clientX-textwith/2)+"px"});
     });
     tcEl.each(function(){
      var el = $(this);
@@ -59,5 +59,5 @@ $(document).ready(function () {
         $('.description').slideUp(250);
         $(this).closest('.projects_row').next().slideDown(250);
     });
-$('.projects img').tclouds();
+$('.projects img').beschreibung();
 });
