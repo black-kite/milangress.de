@@ -11,6 +11,9 @@ files:
     alt:
       label: Alttext
       type: text
+    titletag:
+      label: Description (Title-tag)
+      type: textarea
 fields:
   title:
     label: Title
