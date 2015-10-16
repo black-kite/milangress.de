@@ -19,8 +19,6 @@ var rename = require('gulp-rename');
 var autoprefix = require('gulp-autoprefixer');
 var minifyCSS = require('gulp-minify-css');
 
-var php  = require('gulp-connect-php');
-var browserSync = require('browser-sync');
 
 var pkg = require('./package.json');
 var banner = ['/**',
@@ -40,22 +38,6 @@ var imgSrc = 'content/**/*{gif,ico,jpg,png,svg}',
 	imgDst = 'content/';
 var assetimgSrc = './assets/images/src/**/*',
 	assetimgDst = './assets/images/';
-
-
-
-
-
-gulp.task('connect-sync', function() {
-  connect.server({}, function (){
-    browserSync({
-      proxy: 'localhost:8000'
-    });
-  });
- 
-  gulp.watch('**/*.php').on('change', function () {
-    browserSync.reload();
-  });
-});
 
 
 
