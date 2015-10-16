@@ -1,3 +1,10 @@
+body {
+	text-rendering: optimizeLegibility;
+	text-rendering: geometricPrecision;
+	font-variant-ligatures: common-ligatures,discretionary-ligatures,contextual;
+	-webkit-font-smoothing: Antialiased;
+}
+
 .is-yellow{
 	background-color: #FFDC00;
 }
