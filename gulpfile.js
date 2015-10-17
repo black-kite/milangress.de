@@ -75,7 +75,6 @@ gulp.task('styles', function() {
 	//.pipe(rename({suffix: '.min'}))
 	//.pipe(minifyCSS())
 	//.pipe(gulp.dest(cssDst))
-	.pipe(browserSync.stream())
 	.pipe(notify({ message: 'compiled SCSS' }));
 });
 
