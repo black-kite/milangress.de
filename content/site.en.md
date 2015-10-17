@@ -14,4 +14,4 @@ Keywords:
 
 ----
 
-Copyright: 
+Copyright: © 2015 Milan Gress
