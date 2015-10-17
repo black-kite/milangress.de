@@ -18,8 +18,8 @@ fields:
   title:
     label: Title
     type:  text
-  year:
-    label: Year
+  headline:
+    label: Headline
     type:  text
   text:
     label: Text

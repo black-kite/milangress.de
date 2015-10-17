@@ -5,6 +5,10 @@ body {
 	-webkit-font-smoothing: Antialiased;
 }
 
+.flex-col {
+	flex: 1;
+}
+
 .is-yellow{
 	background-color: #FFDC00;
 }
@@ -52,11 +56,10 @@ ul.menu{
 	}
 }
 .description{
-	width: 100%;
 	margin-left: 1rem;
-	display: none;
 	line-height: 47px;
 	text-align: left;
+	align-self: flex-start;
 }
 
 

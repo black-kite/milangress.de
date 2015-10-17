@@ -19,7 +19,10 @@
 				</div>
 			<?php endforeach ?>
 		</div>
-		<div class="description"><?php echo $project->text()->kirbytext() ?></div>
+		<div class="projects_row">
+		<div class="description flex-col"><?php echo $project->headline()->kirbytext() ?></div>
+		<div class="description flex-col"><?php echo $project->text()->kirbytext() ?></div>
+		</div>
 		</div>
 	<?php endforeach ?>
 </section>
