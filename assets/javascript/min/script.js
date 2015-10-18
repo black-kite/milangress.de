@@ -78,7 +78,8 @@ $(document).ready(function () {
     */
 
     // $('img').filter(function(){return $(this).is('[title]')}).addClass('noCourser decreaseOpacity');
-
-    $('.projects img').beschreibung();
+    if( screen.width >= 480 ) { 
+        $('.projects img').beschreibung();
+    }
 
 });

@@ -31,9 +31,12 @@ ul.menu{
 	z-index: 10;
 }
 .projects {
-	margin: 17rem 0 0 0;
+	margin: 38vh 0 0 0;
 	line-height: 0px;
 	text-align: center;
+	@media (max-width: 600px) {
+		margin: 25vh 0 0 0;
+	}
 	div {
 		flex: 1;
 	}
@@ -57,9 +60,12 @@ ul.menu{
 }
 .description{
 	margin-left: 1rem;
-	line-height: 47px;
 	text-align: left;
 	align-self: flex-start;
+	line-height: 40px;
+	@media (max-width: 600px) {
+		line-height: 24px;	
+	}
 }
 
 
@@ -75,9 +81,10 @@ ul.menu{
 
 #bildbeschreibung{
     display:none;
+    pointer-events:none;
     position:fixed;
     z-index:999999;
-    font-size: 1rem;
-    line-height: 1.2rem;
+    font-size: 16px;
+    line-height: 24px;
     text-align: center;
 }
