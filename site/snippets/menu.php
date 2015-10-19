@@ -1,6 +1,6 @@
 <nav role="navigation">
 
-<div id="navicon">
+<div id="navicon" onclick=''>
   <div class="bar"></div>
   <div class="bar"></div>
   <div class="bar"></div>

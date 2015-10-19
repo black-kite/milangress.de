@@ -1,3 +1,13 @@
+:root {
+	font-size: 22px;
+	line-height: 40px;
+	@media (max-width: 600px) {
+		font-size: 16px;
+		line-height: 24px;
+		
+	}
+}
+
 html {
   box-sizing: border-box;
 }
@@ -9,8 +19,6 @@ body {
 	font-family: "monospaceroman",Helvetica,sans-serif;
 	font-weight: normal;
 	font-style: normal;
-	font-size: 26px;
-	line-height: 47px;
 	color: #000;
 }
 a {
@@ -40,8 +48,11 @@ a {
 }
 
 .header{
-	padding: 16rem 0 0 0;
+	padding: 38vh 0 0 0;
 	display: flex;
+	@media (max-width: 600px) {
+		padding: 25vh 0 0 0;
+	}
 
 	ul {
 		list-style: none;
