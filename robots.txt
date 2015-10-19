@@ -29,4 +29,9 @@ User-agent: Mediapartners-Google*
 Disallow:
 Allow: /*
 
+# Milan
+Disallow: /cgi-bin/
+Disallow: /kunden/
+Disallow: /dev/
+
 Sitemap: http://<example.com>/sitemap.xml
